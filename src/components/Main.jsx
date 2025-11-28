@@ -1,6 +1,7 @@
 import Button from "./Button";
 
 export default function Main({ languages }) {
+    
   return (
     <main>
       <div className="container">
