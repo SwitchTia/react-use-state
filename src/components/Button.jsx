@@ -1,8 +1,9 @@
-export default function Button() {
+
+export default function Button({language}) {
 
     return (
         <div>
-            <button>this is a button</button>
+            <button className="btn">{language.title}</button>
         </div>
     );
 }
