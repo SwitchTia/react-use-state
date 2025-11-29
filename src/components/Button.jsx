@@ -1,9 +1,11 @@
 
-export default function Button({language}) {
+export default function Button({language, onClick}) {
 
     return (
         <div className="gap">
-            <button className="btn" >{language.title}</button>
+            <button className="btn" onClick={onClick}>
+                {language.title}
+            </button>
         </div>
     );
 }
