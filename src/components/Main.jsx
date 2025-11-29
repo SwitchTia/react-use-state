@@ -1,19 +1,24 @@
+import { useState } from "react";
 import Button from "./Button";
 
 export default function Main({ languages }) {
+  const [selectedIndex, setSectedIndex] = useState(0)
     
   return (
     <main>
       <div className="container">
     
         <div className="flex">
-          {languages.map((language) => (
-            <Button key={language.id} language={language} />
+          {languages.map((language, index) => (
+            <Button 
+            key={language.id} 
+            language={language} 
+            onClick={() => setSectedIndex(index)} 
+            />
           ))}
         </div>
         <div className="box">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vel adipisci, quidem porro, eum, consequatur cumque maxime necessitatibus libero dolor nihil provident ad nobis nulla nam nostrum quis error molestiae?</p>
-
+          <p>{languages[selectedIndex].description}</p>
         </div>
       </div>
     </main>
